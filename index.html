@@ -1,2 +1,88 @@
 <!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Habits">
+<meta name="theme-color" content="#0a1a3a">
+<title>Habits</title>
+<style>
+:root{--card:#13285a;--card2:#1b3672;--accent:#4f8cff;--done:#2ecc71;--text:#eaf1ff;--muted:#8ea6d8}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;min-height:100vh;background:linear-gradient(180deg,#081430,#0f2452);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;padding:calc(env(safe-area-inset-top) + 20px) 16px calc(env(safe-area-inset-bottom) + 20px)}
+.wrap{max-width:520px;margin:0 auto}
+h1{margin:0;font-size:32px}
+.date{color:var(--muted);margin:4px 0 16px}
+.bar{height:10px;background:var(--card);border-radius:99px;overflow:hidden}
+.fill{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--done));transition:width .3s}
+.count{color:var(--muted);font-size:14px;margin:8px 0 20px}
+ul{list-style:none;padding:0;margin:0}
+li{display:flex;align-items:center;gap:12px;background:var(--card);border-radius:16px;padding:14px;margin-bottom:10px;cursor:pointer;user-select:none;-webkit-user-select:none;transition:background .2s,transform .1s}
+li:active{transform:scale(.98)}
+li.done{background:var(--card2)}
+.emoji{font-size:28px;width:40px;text-align:center}
+.name{flex:1;font-size:18px}
+li.done .name{color:var(--muted);text-decoration:line-through}
+.check{width:30px;height:30px;border-radius:50%;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-weight:bold}
+li.done .check{background:var(--done);border-color:var(--done);color:#08223a}
+.del{background:none;border:none;color:var(--muted);font-size:18px;padding:4px 8px}
+.empty{color:var(--muted);text-align:center;padding:30px 0}
+form{display:flex;gap:8px;margin-top:20px}
+input{background:var(--card);border:1px solid var(--card2);color:var(--text);border-radius:12px;padding:12px;font-size:16px;min-width:0}
+#emoji{width:60px;text-align:center}
+#name{flex:1}
+button.add{background:var(--accent);color:#fff;border:none;border-radius:12px;padding:0 18px;font-size:22px;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Meine Habits</h1>
+<div class="date" id="date"></div>
+<div class="bar"><div class="fill" id="fill"></div></div>
+<div class="count" id="count"></div>
+<ul id="list"></ul>
+<form id="form">
+<input id="emoji" placeholder="💪">
+<input id="name" placeholder="Neues Habit…" required>
+<button class="add">+</button>
+</form>
+</div>
+<script>
+const KEY='habits-v1';
+let data;
+try{data=JSON.parse(localStorage.getItem(KEY))}catch(e){}
+if(!data)data={habits:[],day:''};
+function today(){const d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(data))}catch(e){}}
+function checkDay(){if(data.day!==today()){data.day=today();data.habits.forEach(h=>h.done=false);save();render()}}
+function render(){
+ document.getElementById('date').textContent=new Date().toLocaleDateString('de-AT',{weekday:'long',day:'numeric',month:'long'});
+ const list=document.getElementById('list');list.innerHTML='';
+ if(!data.habits.length)list.innerHTML='<div class="empty">Noch keine Habits – füg unten eins hinzu!</div>';
+ data.habits.forEach((h,i)=>{
+  const li=document.createElement('li');if(h.done)li.className='done';
+  li.innerHTML='<span class="emoji"></span><span class="name"></span><span class="check">'+(h.done?'✓':'')+'</span><button class="del">✕</button>';
+  li.querySelector('.emoji').textContent=h.emoji;
+  li.querySelector('.name').textContent=h.name;
+  li.onclick=()=>{h.done=!h.done;save();render()};
+  li.querySelector('.del').onclick=e=>{e.stopPropagation();if(confirm(h.name+' löschen?')){data.habits.splice(i,1);save();render()}};
+  list.appendChild(li)});
+ const done=data.habits.filter(h=>h.done).length,total=data.habits.length;
+ document.getElementById('fill').style.width=total?(done/total*100)+'%':'0';
+ document.getElementById('count').textContent=total?done+' von '+total+' erledigt'+(done===total?' 🎉':''):'';
+}
+document.getElementById('form').onsubmit=e=>{
+ e.preventDefault();const n=document.getElementById('name'),em=document.getElementById('emoji');
+ data.habits.push({emoji:em.value.trim()||'⭐',name:n.value.trim(),done:false});
+ n.value='';em.value='';save();render()};
+checkDay();render();
+setInterval(checkDay,30000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)checkDay()});
+</script>
+</body>
+</html>
+
 
