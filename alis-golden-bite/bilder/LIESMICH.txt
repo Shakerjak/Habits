@@ -1,0 +1,4 @@
+Hier die freigegebenen Originalfotos ablegen (JPG, PNG oder WebP, mindestens 2000 px breit).
+Danach in inhalte/bilder.json beim passenden Platz eintragen:
+  "datei": "dateiname.jpg", "alt": "Was auf dem Foto zu sehen ist", "freigegeben": true
+Der Build erzeugt daraus automatisch optimierte Größen in AVIF, WebP und JPEG.

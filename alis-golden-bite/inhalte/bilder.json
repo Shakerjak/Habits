@@ -1,0 +1,60 @@
+{
+  "_anleitung": [
+    "Fotos: Originaldatei (JPG, PNG oder WebP, mind. 2000 px breit) in den Ordner bilder/ legen und unten bei \"datei\" den Dateinamen eintragen.",
+    "\"alt\": kurz beschreiben, was auf dem Foto wirklich zu sehen ist (für Screenreader und Suchmaschinen).",
+    "\"freigegeben\": erst auf true setzen, wenn die Bildrechte geklärt sind (eigene Fotos oder schriftliche Freigabe des Fotografen).",
+    "\"fotonachweis\": z. B. \"Foto: Max Muster\" – erscheint im Impressum. null, wenn keine Nennung nötig ist.",
+    "Der Build erzeugt automatisch passende Größen in AVIF, WebP und JPEG."
+  ],
+  "bilder": {
+    "hero": {
+      "datei": null,
+      "alt": "OFFEN: Beschreibung des Fotos, z. B. „Yaprak Döner im Brot mit Salat und Soße“",
+      "freigegeben": false,
+      "fotonachweis": null,
+      "platzhalter": "Hauptbild: Yaprak Döner, Querformat, mind. 2400 × 1800 px"
+    },
+    "yaprak-doener": {
+      "datei": null,
+      "alt": "OFFEN: Beschreibung des Fotos",
+      "freigegeben": false,
+      "fotonachweis": null,
+      "platzhalter": "Yaprak Döner, Format 4:3"
+    },
+    "yaprak-duerum": {
+      "datei": null,
+      "alt": "OFFEN: Beschreibung des Fotos",
+      "freigegeben": false,
+      "fotonachweis": null,
+      "platzhalter": "Yaprak Dürüm, Format 4:3"
+    },
+    "specialburger": {
+      "datei": null,
+      "alt": "OFFEN: Beschreibung des Fotos",
+      "freigegeben": false,
+      "fotonachweis": null,
+      "platzhalter": "Ali’s Specialburger, Format 4:3"
+    },
+    "lokal-innen": {
+      "datei": null,
+      "alt": "OFFEN: Beschreibung des Fotos",
+      "freigegeben": false,
+      "fotonachweis": null,
+      "platzhalter": "Lokal innen mit Theke, Hochformat 4:5"
+    },
+    "lokal-spiess": {
+      "datei": null,
+      "alt": "OFFEN: Beschreibung des Fotos",
+      "freigegeben": false,
+      "fotonachweis": null,
+      "platzhalter": "Döner-Spieß oder Zubereitung, Hochformat 4:5"
+    },
+    "eingang": {
+      "datei": null,
+      "alt": "OFFEN: Beschreibung des Fotos, z. B. „Eingang von Ali’s Golden Bite in der Siebenstädterstraße 3“",
+      "freigegeben": false,
+      "fotonachweis": null,
+      "platzhalter": "Eingang von außen, Format 4:3"
+    }
+  }
+}

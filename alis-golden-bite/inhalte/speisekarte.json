@@ -1,0 +1,314 @@
+{
+  "_anleitung": [
+    "Speisekarte: Kategorien und Gerichte in der Reihenfolge, in der sie auf der Website erscheinen.",
+    "preis: Betrag in Euro als Zahl mit Punkt, z. B. 11.5 für € 11,50. null = Preis fehlt noch.",
+    "Mehrere Größen: \"preis\": [{\"bezeichnung\": \"5 Stück\", \"preis\": 3.5}, {\"bezeichnung\": \"10 Stück\", \"preis\": 6}]",
+    "allergene: Buchstaben laut Allergenliste unten, z. B. [\"A\", \"C\", \"G\"]. [] = enthält keines der 14 Hauptallergene. null = noch nicht angegeben.",
+    "kennzeichnung: nur bestätigte Angaben, erlaubt sind \"scharf\", \"vegetarisch\", \"vegan\".",
+    "beschreibung: null = keine Beschreibung. \"OFFEN: …\" = fehlt noch. \"PRÜFEN: …\" = Entwurf, bitte bestätigen und Präfix löschen.",
+    "Felder mit Unterstrich (_quelle, _referenz) erscheinen nicht auf der Website. _referenz = Plattformpreise zum Abgleich, nicht automatisch Ladenpreise.",
+    "Wenn alles vom Betrieb bestätigt ist: \"bestaetigt\": true und \"stand\" auf das Datum setzen."
+  ],
+
+  "bestaetigt": false,
+  "stand": "OFFEN: Datum der vom Betrieb bestätigten Karte, z. B. 01.12.2026",
+  "pdf": null,
+  "_pdf_anleitung": "Optional: aktuelle PDF-Karte unter src/static/speisekarte.pdf ablegen und hier \"/speisekarte.pdf\" eintragen.",
+
+  "allergene": {
+    "A": "Gluten",
+    "B": "Krebstiere",
+    "C": "Ei",
+    "D": "Fisch",
+    "E": "Erdnuss",
+    "F": "Soja",
+    "G": "Milch oder Laktose",
+    "H": "Schalenfrüchte",
+    "L": "Sellerie",
+    "M": "Senf",
+    "N": "Sesam",
+    "O": "Sulfite",
+    "P": "Lupinen",
+    "R": "Weichtiere"
+  },
+
+  "kategorien": [
+    {
+      "id": "doener-duerum",
+      "name": "Yaprak Döner & Dürüm",
+      "intro": "„Yaprak“ ist Türkisch für „Blatt“ – der Name steht für Döner aus dünnen, geschichteten Fleischscheiben.",
+      "zusatz": "OFFEN: Fleischsorte, Brot und Standard-Beilagen (Salat, Soßen) für alle Döner-Gerichte",
+      "gerichte": [
+        {
+          "id": "yaprak-doener",
+          "name": "Yaprak Döner",
+          "beschreibung": "OFFEN: Zutaten und Beilagen",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Lieferando laut Suchindex (13.11.2026)",
+          "_referenz": { "lieferando": 11.0 }
+        },
+        {
+          "id": "yaprak-duerum",
+          "name": "Yaprak Dürüm",
+          "beschreibung": "OFFEN: Zutaten und Beilagen",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Lieferando laut Suchindex (13.11.2026)",
+          "_referenz": { "lieferando": 12.0 }
+        },
+        {
+          "id": "yaprak-doener-teller",
+          "name": "Yaprak Döner Teller",
+          "beschreibung": "OFFEN: Beilagen",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Lieferando laut Suchindex (13.11.2026)",
+          "_referenz": { "lieferando": 19.5 }
+        },
+        {
+          "id": "iskender-teller",
+          "name": "Iskender Teller",
+          "beschreibung": "OFFEN: Zutaten und Beilagen",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Lieferando laut Suchindex (13.11.2026)",
+          "_referenz": { "lieferando": 21.0 }
+        }
+      ]
+    },
+    {
+      "id": "burger",
+      "name": "Burger",
+      "intro": null,
+      "zusatz": null,
+      "gerichte": [
+        {
+          "id": "klassik-burger",
+          "name": "Klassik Burger",
+          "beschreibung": "PRÜFEN: Brioche-Bun, Rindfleisch-Patty, Eisbergsalat, Tomate, karamellisierte Zwiebeln, Röstzwiebeln, Cheddar, Essiggurken und Burgersoße",
+          "preis": null,
+          "allergene": null,
+          "optionen": [{ "bezeichnung": "Als Menü mit Pommes, 3 Zwiebelringen, Ketchup und Mayonnaise", "aufpreis": null }],
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 10.0, "wolt_menue_aufpreis": 10.0 }
+        },
+        {
+          "id": "ali-s-specialburger",
+          "name": "Ali’s Specialburger",
+          "beschreibung": "PRÜFEN: Brioche-Bun, Rindfleisch-Patty, Cheddar, Eisbergsalat, Tomaten, karamellisierte Zwiebeln, Röstzwiebeln, Essiggurken, Burgersoße und Trüffelsoße",
+          "preis": null,
+          "allergene": null,
+          "optionen": [{ "bezeichnung": "Als Menü mit Pommes, 3 Zwiebelringen, Ketchup und Mayonnaise", "aufpreis": null }],
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 15.0, "wolt_menue_aufpreis": 10.0 }
+        },
+        {
+          "id": "chilli-cheeseburger",
+          "name": "Chilli Cheeseburger",
+          "beschreibung": "PRÜFEN: Brioche-Bun, Rindfleisch-Patty, Eisbergsalat, Tomaten, Jalapeños, karamellisierte Zwiebeln, Röstzwiebeln, Essiggurken, Chilli-Cheese-Soße und Burgersoße",
+          "preis": null,
+          "allergene": null,
+          "optionen": [{ "bezeichnung": "Als Menü mit Pommes, 3 Zwiebelringen, Ketchup und Mayonnaise", "aufpreis": null }],
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 15.0, "wolt_menue_aufpreis": 5.0 }
+        },
+        {
+          "id": "double-cheeseburger",
+          "name": "Double Cheeseburger",
+          "beschreibung": "PRÜFEN: Brioche-Bun, Rindfleisch-Patty, karamellisierte Zwiebeln, Röstzwiebeln, Cheddar, Essiggurken und Burgersoße",
+          "_hinweis": "Anzahl der Patties und Käsescheiben in der Beschreibung ergänzen",
+          "preis": null,
+          "allergene": null,
+          "optionen": [{ "bezeichnung": "Als Menü mit Pommes, 3 Zwiebelringen, Ketchup und Mayonnaise", "aufpreis": null }],
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 15.0, "wolt_menue_aufpreis": 10.0 }
+        },
+        {
+          "id": "triple-cheeseburger",
+          "name": "Triple Cheeseburger",
+          "beschreibung": "PRÜFEN: Brioche-Bun, Rindfleisch-Patty, karamellisierte Zwiebeln, Röstzwiebeln, Cheddar, Essiggurken und Burgersoße",
+          "_hinweis": "Anzahl der Patties und Käsescheiben in der Beschreibung ergänzen",
+          "preis": null,
+          "allergene": null,
+          "optionen": [{ "bezeichnung": "Als Menü mit Pommes, 3 Zwiebelringen, Ketchup und Mayonnaise", "aufpreis": null }],
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 20.0, "wolt_menue_aufpreis": 10.0 }
+        },
+        {
+          "id": "cheeseburger-menue",
+          "name": "Cheeseburger Menü",
+          "beschreibung": "PRÜFEN: Cheeseburger mit Brioche-Bun, Rindfleisch-Patty, karamellisierten Zwiebeln, Röstzwiebeln, Cheddar, Essiggurken und Burgersoße, dazu Pommes, 3 Zwiebelringe, Ketchup und Mayonnaise",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 20.0 }
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "intro": null,
+      "zusatz": "OFFEN: Pizzagröße (Durchmesser), falls auf der Karte gewünscht",
+      "gerichte": [
+        {
+          "id": "pizza-margherita",
+          "name": "Pizza Margherita",
+          "beschreibung": "PRÜFEN: Tomatensoße, Mozzarella, Oregano",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 10.0 }
+        },
+        {
+          "id": "pizza-mozzarella",
+          "name": "Pizza Mozzarella",
+          "beschreibung": "PRÜFEN: Tomatensoße, extra Mozzarella, Oregano",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 11.0 }
+        },
+        {
+          "id": "pizza-funghi",
+          "name": "Pizza Funghi",
+          "beschreibung": "PRÜFEN: Tomatensoße, Mozzarella, Champignons, Oregano",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 12.0 }
+        },
+        {
+          "id": "vegetarische-pizza",
+          "name": "Vegetarische Pizza",
+          "beschreibung": "PRÜFEN: Tomatensoße, Mozzarella, Champignons, Zwiebeln, Oregano",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_hinweis": "Auf Wolt als vegetarisch gekennzeichnet – Kennzeichnung erst nach Bestätigung (Käse, Zutaten) setzen",
+          "_referenz": { "wolt": 13.0 }
+        },
+        {
+          "id": "pizza-salami",
+          "name": "Pizza Salami",
+          "beschreibung": "PRÜFEN: Tomatensoße, Mozzarella, Rindersalami, Oregano",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 13.0 }
+        },
+        {
+          "id": "pizza-sucuk",
+          "name": "Pizza Sucuk",
+          "beschreibung": "PRÜFEN: Tomatensoße, Mozzarella, Sucuk (Knoblauchwurst), Oregano",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 13.0 }
+        },
+        {
+          "id": "pizza-diavolo",
+          "name": "Pizza Diavolo",
+          "beschreibung": "PRÜFEN: Tomatensoße, Mozzarella, scharfe Rindersalami, Peperoni, Oregano",
+          "preis": null,
+          "allergene": null,
+          "kennzeichnung": ["scharf"],
+          "_quelle": "Wolt (13.11.2026), dort als „scharf“ beschrieben",
+          "_referenz": { "wolt": 13.0 }
+        },
+        {
+          "id": "pizza-calzone",
+          "name": "Pizza Calzone",
+          "beschreibung": "PRÜFEN: Tomatensoße, Mozzarella, Salami, Champignons, Oregano",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 13.5 }
+        },
+        {
+          "id": "pizza-huhn-kebab",
+          "name": "Pizza Huhn Kebab",
+          "beschreibung": "OFFEN: Belag",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026), ohne Beschreibung",
+          "_referenz": { "wolt": 15.0 }
+        }
+      ]
+    },
+    {
+      "id": "snacks",
+      "name": "Snacks",
+      "intro": null,
+      "zusatz": null,
+      "gerichte": [
+        {
+          "id": "pommes",
+          "name": "Portion Pommes",
+          "beschreibung": "PRÜFEN: mit Ketchup und Mayonnaise",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 6.5 }
+        },
+        {
+          "id": "zwiebelringe",
+          "name": "Zwiebelringe",
+          "beschreibung": null,
+          "preis": [
+            { "bezeichnung": "5 Stück", "preis": null },
+            { "bezeichnung": "10 Stück", "preis": null }
+          ],
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt_5_stueck": 3.5, "wolt_10_stueck": 6.0 }
+        },
+        {
+          "id": "chilli-cheese-pommes",
+          "name": "Chilli Cheese Pommes",
+          "beschreibung": "PRÜFEN: mit 3 Zwiebelringen und 2 Soßen",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 11.0 }
+        }
+      ]
+    },
+    {
+      "id": "suesses",
+      "name": "Süßes",
+      "intro": null,
+      "zusatz": null,
+      "gerichte": [
+        {
+          "id": "baklava",
+          "name": "Baklava",
+          "beschreibung": "OFFEN: Portion bzw. Stückzahl",
+          "preis": null,
+          "allergene": null,
+          "_quelle": "Wolt (13.11.2026)",
+          "_referenz": { "wolt": 4.0 }
+        }
+      ]
+    },
+    {
+      "id": "getraenke",
+      "name": "Getränke",
+      "intro": "Alkoholfreie Getränke, gekühlt.",
+      "zusatz": "OFFEN: Getränkeauswahl im Lokal bestätigen (z. B. Ayran, Tee, Sprite)",
+      "gerichte": [
+        { "id": "roemerquelle-still", "name": "Römerquelle still", "beschreibung": "0,5 l", "preis": null, "allergene": null, "_quelle": "Wolt (13.11.2026)", "_referenz": { "wolt": 3.6 } },
+        { "id": "roemerquelle-prickelnd", "name": "Römerquelle prickelnd", "beschreibung": "0,5 l", "preis": null, "allergene": null, "_quelle": "Wolt (13.11.2026)", "_referenz": { "wolt": 3.6 } },
+        { "id": "coca-cola-033", "name": "Coca-Cola", "beschreibung": "0,33 l Dose", "preis": null, "allergene": null, "_quelle": "Wolt (13.11.2026)", "_referenz": { "wolt": 3.3 } },
+        { "id": "coca-cola-05", "name": "Coca-Cola", "beschreibung": "0,5 l Flasche", "preis": null, "allergene": null, "_quelle": "Wolt (13.11.2026)", "_referenz": { "wolt": 3.6 } },
+        { "id": "coca-cola-zero-033", "name": "Coca-Cola Zero", "beschreibung": "0,33 l Dose", "preis": null, "allergene": null, "_quelle": "Wolt (13.11.2026)", "_referenz": { "wolt": 3.3 } },
+        { "id": "coca-cola-zero-05", "name": "Coca-Cola Zero", "beschreibung": "0,5 l Flasche", "preis": null, "allergene": null, "_quelle": "Wolt (13.11.2026)", "_referenz": { "wolt": 3.6 } },
+        { "id": "fanta-orange", "name": "Fanta Orange", "beschreibung": "0,33 l Dose", "preis": null, "allergene": null, "_quelle": "Wolt (13.11.2026)", "_referenz": { "wolt": 3.3 } },
+        { "id": "mezzo-mix", "name": "Mezzo Mix", "beschreibung": "0,33 l Dose", "preis": null, "allergene": null, "_quelle": "Wolt (13.11.2026)", "_referenz": { "wolt": 3.3 } },
+        { "id": "red-bull", "name": "Red Bull Energy Drink", "beschreibung": "0,25 l Dose", "preis": null, "allergene": null, "_quelle": "Wolt (13.11.2026)", "_referenz": { "wolt": 3.8 } },
+        { "id": "powerade", "name": "Powerade Mountain Blast", "beschreibung": "0,5 l Flasche", "preis": null, "allergene": null, "_quelle": "Wolt (13.11.2026)", "_referenz": { "wolt": 3.6 } }
+      ]
+    }
+  ]
+}

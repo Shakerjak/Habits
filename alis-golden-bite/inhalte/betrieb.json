@@ -1,0 +1,98 @@
+{
+  "_anleitung": [
+    "Zentrale Betriebsdaten. Nach jeder Änderung: npm run build (Vorschau) bzw. npm run build:live (Veröffentlichung).",
+    "\"OFFEN: …\" = Angabe fehlt noch. In der Vorschau erscheint ein gelb markierter Platzhalter, die Live-Version lässt sich erst bauen, wenn sie ersetzt ist.",
+    "\"PRÜFEN: …\" = aus öffentlicher Quelle vorausgefüllt. Wert bestätigen und das Präfix \"PRÜFEN: \" löschen.",
+    "null = Angabe wird nicht verwendet und die Zeile entfällt."
+  ],
+
+  "name": "Ali’s Golden Bite",
+  "domain": "OFFEN: endgültige Domain mit https://, z. B. https://www.beispiel.at (ohne Schrägstrich am Ende)",
+  "logo": null,
+
+  "adresse": {
+    "strasse": "Siebenstädterstraße 3",
+    "plz": "5020",
+    "ort": "Salzburg",
+    "land": "Österreich",
+    "laendercode": "AT"
+  },
+
+  "telefon": {
+    "anzeige": "+43 664 2231637",
+    "link": "+436642231637"
+  },
+
+  "email": "OFFEN: E-Mail-Adresse für Anfragen (Pflichtangabe im Impressum)",
+
+  "kueche": ["Döner", "Burger", "Pizza"],
+
+  "oeffnungszeiten": {
+    "_anleitung": "Zeiten im Format \"11:00\". Mehrere Zeitfenster pro Tag möglich, z. B. [[\"11:00\",\"14:00\"],[\"17:00\",\"22:00\"]]. Ruhetag = []. Erst wenn \"bestaetigt\": true gesetzt ist, erscheinen die Zeiten auf der Website und in den strukturierten Daten.",
+    "bestaetigt": false,
+    "tage": {
+      "montag": null,
+      "dienstag": null,
+      "mittwoch": null,
+      "donnerstag": null,
+      "freitag": null,
+      "samstag": null,
+      "sonntag": null
+    },
+    "hinweis": null
+  },
+
+  "vor_ort": {
+    "_anleitung": "Kurze, vom Betrieb bestätigte Fakten zum Lokal. Jeder Eintrag ist ein Satz.",
+    "fakten": [
+      "OFFEN: Sitzplätze im Lokal? (z. B. „Im Lokal gibt es 12 Sitzplätze.“ oder Zeile löschen)",
+      "OFFEN: Zahlungsarten im Lokal (z. B. „Bar- und Kartenzahlung“)",
+      "OFFEN: Zubereitung, z. B. was täglich frisch vorbereitet wird"
+    ],
+    "vorstellung": "OFFEN: 2–3 Sätze zum Betrieb vom Betreiber (seit wann, wer steht hinter der Theke, was macht den Yaprak Döner aus)"
+  },
+
+  "bestellen": {
+    "_anleitung": "Bestelllinks. \"optionen\" nur mit tatsächlich angebotenen Möglichkeiten füllen: \"Lieferung\" und/oder \"Abholung\".",
+    "hinweis": "Preise und Zeiten auf den Lieferplattformen können von der Karte im Lokal abweichen.",
+    "anbieter": [
+      {
+        "name": "Lieferando",
+        "url": "https://www.lieferando.at/speisekarte/alis-golden-bite-siebenstadterstrasse",
+        "optionen": "OFFEN: Lieferung und/oder Abholung bei Lieferando bestätigen",
+        "_quelle": "URL im Suchindex als „Ali's Golden Bite Salzburg - Essen Bestellen“ gelistet; Seiteninhalt wegen Bot-Schutz nicht automatisch prüfbar (13.11.2026)."
+      },
+      {
+        "name": "Wolt",
+        "url": "https://wolt.com/de-at/aut/salzburg/restaurant/alis-golden-bite-5020",
+        "optionen": ["Lieferung", "Abholung"],
+        "_quelle": "Wolt-Eintrag geprüft am 13.11.2026: Name, Adresse, Telefon, Liefer- und Abholoption."
+      }
+    ],
+    "abholung_im_lokal": "OFFEN: Telefonisch vorbestellen und abholen möglich? (ja: Satz eintragen, nein: null)"
+  },
+
+  "google": {
+    "_anleitung": "Optional: Place-ID aus dem Google-Unternehmensprofil (beginnt mit ChIJ…). Ohne Place-ID suchen die Links nach Name und Adresse.",
+    "place_id": null
+  },
+
+  "rechtliches": {
+    "_anleitung": "Angaben für Impressum und Datenschutzerklärung. Zeilen mit null entfallen.",
+    "inhaber": "PRÜFEN: Muhammed Ali Ozan",
+    "rechtsform": "PRÜFEN: Einzelunternehmen",
+    "gisa_zahl": "PRÜFEN: 39005380",
+    "gewerbe": "OFFEN: Gewerbewortlaut laut GISA-Auszug, z. B. „Gastgewerbe in der Betriebsart …“",
+    "uid": "OFFEN: UID-Nummer (ATU…), falls vorhanden – sonst null eintragen",
+    "firmenbuch": null,
+    "behoerde": "PRÜFEN: Magistrat der Stadt Salzburg",
+    "kammer": "PRÜFEN: Wirtschaftskammer Salzburg, Fachgruppe Gastronomie",
+    "hosting": "OFFEN: Hosting-Anbieter mit Name und Anschrift (für die Datenschutzerklärung)",
+    "log_speicherdauer": "OFFEN: Speicherdauer der Server-Logdateien laut Hoster (z. B. 14 Tage)",
+    "avv_hinweis": "PRÜFEN: Mit dem Hosting-Anbieter besteht ein Vertrag zur Auftragsverarbeitung nach Art. 28 DSGVO.",
+    "plattform_hinweis": "PRÜFEN: Für Bestellungen über Lieferando oder Wolt ist die jeweilige Plattform verantwortlich. Wir erhalten von der Plattform nur die Angaben, die zur Zubereitung und Übergabe Ihrer Bestellung nötig sind, und verwenden sie ausschließlich dafür (Art. 6 Abs. 1 lit. b DSGVO).",
+    "_quelle": "Inhaber, GISA-Zahl und Anschrift aus den Händlerangaben auf Wolt (Digital Services Act), abgerufen am 13.11.2026."
+  },
+
+  "stand_rechtstexte": "13.11.2026"
+}

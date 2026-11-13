@@ -1,0 +1,130 @@
+{
+  "_anleitung": [
+    "Alle sichtbaren Texte der Startseite und der Speisekarte sowie die Seitentitel und Meta-Beschreibungen für Suchmaschinen.",
+    "Für eine spätere englische Version wird diese Datei als texte.en.json übersetzt.",
+    "\"PRÜFEN: …\" = Entwurf, bitte bestätigen und Präfix löschen."
+  ],
+
+  "sprache": "de-AT",
+  "og_locale": "de_AT",
+
+  "navigation": {
+    "speisekarte": "Speisekarte",
+    "bestellung": "Bestellung",
+    "kontakt": "Kontakt",
+    "online_bestellen": "Online bestellen",
+    "menue_oeffnen": "Menü",
+    "schliessen": "Schließen",
+    "startseite": "Startseite",
+    "zum_inhalt": "Zum Inhalt springen"
+  },
+
+  "aktionsleiste": {
+    "bestellen": "Bestellen",
+    "speisekarte": "Speisekarte",
+    "anrufen": "Anrufen"
+  },
+
+  "startseite": {
+    "titel": "Yaprak Döner in Salzburg | Ali’s Golden Bite",
+    "beschreibung": "Yaprak Döner, Burger und Pizza bei Ali’s Golden Bite in Salzburg. Speisekarte ansehen, online bestellen und den Weg in die Siebenstädterstraße 3 finden.",
+
+    "hero": {
+      "dachzeile": "Ali’s Golden Bite · Streetfood",
+      "ueberschrift": "Yaprak Döner in Salzburg",
+      "text": "Bei Ali’s Golden Bite in Salzburg gibt es Yaprak Döner und Dürüm, Burger, Pizza und Snacks. Direkt im Lokal oder online über Lieferando und Wolt bestellen.",
+      "button_karte": "Speisekarte ansehen",
+      "button_bestellen": "Online bestellen"
+    },
+
+    "gerichte": {
+      "dachzeile": "Aus der Küche",
+      "ueberschrift": "Yaprak Döner, Dürüm und Burger",
+      "text": "Drei Gerichte von der Karte. Preise und Allergene stehen in der Speisekarte.",
+      "link": "In der Speisekarte ansehen",
+      "auswahl": [
+        {
+          "gericht": "yaprak-doener",
+          "bild": "yaprak-doener",
+          "text": "PRÜFEN: Dünne, geschichtete Fleischscheiben vom Spieß – auch als Yaprak Döner Teller erhältlich."
+        },
+        {
+          "gericht": "yaprak-duerum",
+          "bild": "yaprak-duerum",
+          "text": "PRÜFEN: Yaprak Döner im gerollten Fladen – praktisch für unterwegs."
+        },
+        {
+          "gericht": "ali-s-specialburger",
+          "bild": "specialburger",
+          "text": "PRÜFEN: Brioche-Bun, Rindfleisch-Patty und Cheddar mit karamellisierten Zwiebeln, Röstzwiebeln und Trüffelsoße."
+        }
+      ]
+    },
+
+    "lokal": {
+      "dachzeile": "Das Lokal",
+      "ueberschrift": "Streetfood in der Siebenstädterstraße",
+      "fakten_titel": "Gut zu wissen",
+      "fakten_fix": [
+        "Auf der Karte: Yaprak Döner und Dürüm, Burger, Pizza, Snacks und Getränke.",
+        "Online bestellen über Lieferando und Wolt."
+      ]
+    },
+
+    "bewertungen": {
+      "ueberschrift": "Bewertungen auf Google",
+      "text": "Erfahrungen anderer Gäste, Fotos und aktuelle Infos stehen im Google-Unternehmensprofil von Ali’s Golden Bite.",
+      "button": "Google-Bewertungen ansehen"
+    },
+
+    "bestellen": {
+      "dachzeile": "Bestellung",
+      "ueberschrift": "Döner in Salzburg online bestellen",
+      "text": "Bestellt wird direkt beim Lieferdienst. Die Angebote der Anbieter auf einen Blick:",
+      "button_vorlage": "Bei {anbieter} bestellen",
+      "lokal_titel": "Direkt im Lokal",
+      "lokal_text": "Vorbeikommen und vor Ort bestellen:",
+      "anrufen": "Anrufen"
+    },
+
+    "kontakt": {
+      "dachzeile": "Kontakt",
+      "ueberschrift": "Kontakt und Anfahrt",
+      "adresse_titel": "Adresse",
+      "telefon_titel": "Telefon",
+      "zeiten_titel": "Öffnungszeiten",
+      "route": "Route planen",
+      "anrufen": "Anrufen"
+    }
+  },
+
+  "speisekarte": {
+    "titel": "Speisekarte | Ali’s Golden Bite – Döner, Burger & Pizza in Salzburg",
+    "beschreibung": "Speisekarte von Ali’s Golden Bite in Salzburg: Yaprak Döner und Dürüm, Burger, Pizza, Snacks und Getränke mit Preisen in Euro und Allergenangaben.",
+    "dachzeile": "Ali’s Golden Bite",
+    "ueberschrift": "Speisekarte",
+    "text": "Yaprak Döner und Dürüm, Burger, Pizza, Snacks und Getränke. Alle Preise in Euro inklusive Mehrwertsteuer.",
+    "kategorien_label": "Kategorien",
+    "stand": "Stand",
+    "pdf": "Speisekarte als PDF",
+    "allergene_ueberschrift": "Allergeninformation",
+    "allergene_text": "Die Buchstaben bei den Gerichten stehen für die 14 Hauptallergene laut EU-Lebensmittelinformationsverordnung.",
+    "allergene_frage": "Fragen zu Zutaten und Allergenen beantwortet unser Team gerne im Lokal oder telefonisch.",
+    "allergene_keine": "Enthält keines der 14 Hauptallergene",
+    "allergene_label": "Allergene",
+    "menue_option": "Option",
+    "cta_ueberschrift": "Bestellen oder vorbeikommen",
+    "cta_text": "Online über Lieferando und Wolt oder direkt im Lokal in der Siebenstädterstraße 3."
+  },
+
+  "allgemein": {
+    "heute": "Heute",
+    "geschlossen": "Geschlossen",
+    "uhr": "Uhr",
+    "wochentage": ["Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"],
+    "fusszeile_text": "Yaprak Döner und Dürüm, Burger, Pizza und Snacks in Salzburg.",
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz",
+    "neues_fenster": "öffnet externe Seite"
+  }
+}
